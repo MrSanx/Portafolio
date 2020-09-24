@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="sources\brand.png" type="image/icon type">
+        <title>Contact | Sanx Portafolio</title>
+        <!--FONT AWESOME-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <!--FONT ROBOTO-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+              rel="stylesheet">
+        <!--FONT OPEN SANS-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+        <!--CUSTOM CSS-->
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <!--Just the header-->
+        <div class="header">
+            <nav class="nav-main">
+                <!--Left Part-->
+                <img src="sources\brand.png" alt="brand" class="nav-brand">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="portafolio.html">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href="about_me.html">About me</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <!--Right Part-->
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="\sources\en.png" alt="Language" class="nav-languages">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </div>
+        <!--Formulary-->
+        <div class="formulary">
+            <div class="formulary-box">
+                <div class="formulary-box2">
+                    <div class="formulary-box3">
+                        <h2>Information needed:</h2>
+                        <form action = "./contact" method = "get">
+                            <p>Name </p> <input type="text" name="name" id="name"> <br><br>
+                            <p>Surname </p> <input type="text" name="surname" id="surname"> <br><br>
+                            <p>Company </p> <input type="text" name="company" id="surname"> <br><br>
+                            <p>Mail </p> <input type="text" name="mail" id="surname"> <br><br>
+                            <p>Need 
+                                <select name = "need" required >
+                                    <option value="1">Business</option>
+                                    <option value="2">Information</option>
+                                    <option value="3">N/A</option>
+                                </select>
+                            </p> <br>
+                            <p>Summary </p> <input type="text" name="summary" id="surname"> <br><br>
+                            <p> <input type="submit" value="send"> </p> <br> <br>
+                            <a href="list.jsp"> See The List </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <section class="footer">
+            <h1>Contact me</h1>
+            <div>
+                <a href="https://www.facebook.com/Heklai/">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/d_sanx/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="about_me.html">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </section>
+    </body>
+
+</html>
