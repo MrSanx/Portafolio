@@ -60,21 +60,38 @@
                 <div class="formulary-box2">
                     <div class="formulary-box3">
                         <h2>Information needed:</h2>
-                        <form action = "./contact" method = "get">
+                        <form name="personal" method="post" action="contact">
                             <p>Name </p> <input type="text" name="name" id="name"> <br><br>
                             <p>Surname </p> <input type="text" name="surname" id="surname"> <br><br>
-                            <p>Company </p> <input type="text" name="company" id="surname"> <br><br>
-                            <p>Mail </p> <input type="text" name="mail" id="surname"> <br><br>
-                            <p>Need 
-                                <select name = "need" required >
+                            <p>Company </p> <input type="text" name="company" id="company"> <br><br>
+                            <p>Mail </p> <input type="text" name="mail" id="mail"> <br><br>
+                            <p>Need
+                                <select name="need" required id="need">
                                     <option value="1">Business</option>
                                     <option value="2">Information</option>
                                     <option value="3">N/A</option>
                                 </select>
                             </p> <br>
-                            <p>Summary </p> <input type="text" name="summary" id="surname"> <br><br>
-                            <p> <input type="submit" value="send"> </p> <br> <br>
-                            <a href="list.jsp"> See The List </a>
+                            <p>Summary </p> <input type="text" name="summary" id="summary"> <br><br>
+                            <input type="submit" value="Enviar"><br><br>
+                        </form>
+                        <form onsubmit="traerDatos()">
+                            <input type="submit" value="Ver JSON"><br><br>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Surname</th>
+                                        <th>Company</th>
+                                        <th>Mail</th>
+                                        <th>Need</th>
+                                        <th>Summary</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="res">
+                                </tbody>
+                                <p>No tengo idea porque, pero cuando lee el archivo dura como un milisegundo y se borra</p>
+                            </table>
                         </form>
                     </div>
                 </div>
@@ -96,6 +113,7 @@
                 </a>
             </div>
         </section>
+        <script src="main.js" type="text/javascript"></script>
     </body>
 
 </html>

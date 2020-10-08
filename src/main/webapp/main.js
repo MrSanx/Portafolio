@@ -1,26 +1,43 @@
-function message(){
+console.log("Server is starting");
+function saveJSON() {
+    var varName = document.getElementById('name').value;
+    var varSurname = document.getElementById('surname').value;
+    var varCompany = document.getElementById('company').value;
+    var varMail = document.getElementById('mail').value;
+    var varNeed = document.getElementById('need').value;
+    var varSummary = document.getElementById('summary').value;
+    console.log("Nombre= " + varName + "; Apellido= " + varSurname + "; Compañia= " + varCompany + "; Correo= " + varMail + "; Nececidad= " + varName + "; Resumen= " + varSummary);
 }
 
-function check() {
-  var name = document.forms["formulary"]["name"].value;
-  var surname = document.forms["formulary"]["surname"].value;
-  var company = document.forms["formulary"]["company"].value;
-  var company = document.forms["formulary"]["mail"].value;
-  var message = document.forms["formulary"]["other"].value;
-  if (name == "" || surname=="" || company=="" || mail==""){
-    alert("The information is incomplete");
-    return false;
-  }else{
-      alert(`Thanks for the data, in somedays i will contact you`);
-  }
+document.querySelector('#boton').addEventListener('click', traerDatos);
+
+function traerDatos() {
+    console.log("Dentro de la función traerDatos");
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.open("GET", "dataBase.json", true);
+    xhttp.send();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            let data = JSON.parse(this.responseText);
+            console.log(data);
+
+            let res = document.querySelector('#res');
+            res.innerHTML = "";
+            for (let item of data) {
+                console.log(item.name);
+                res.innerHTML += `
+                <tr>
+                    <th>${item.name}</th>
+                    <th>${item.surname}</th>
+                    <th>${item.company}</th>
+                    <th>${item.mail}</th>
+                    <th>${item.need}</th>
+                    <th>${item.summary}</th>
+                </tr>
+                `
+            }
+        }
+    }
 }
-
-function clean() {
-  setTimeout('document.formulary.reset()',2000);
-  return false; 
-}
-
-ScrollReveal().reveal('.showcase');
-ScrollReveal().reveal('.info', { delay: 500 });
-ScrollReveal().reveal('.footer', { delay: 500 });
-

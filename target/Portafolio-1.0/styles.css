@@ -248,7 +248,7 @@
         padding: 10px;
     }
     .formulary-box{
-        margin: 20px 30%;
+        margin: 20px 10px;
         padding: 5px;
         border-style: dashed;
         background-color: #d2cadf;
@@ -256,10 +256,11 @@
         
     }
     .formulary-box2{
-        margin: 100px;
+        margin: 20px 20px;
         text-align-last: center;
     }
     .formulary-box3{
+        margin: 20px 20px;
         border: 1px solid black;
     }
    
